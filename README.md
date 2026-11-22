@@ -50,6 +50,20 @@ Smart_Parking_Space_Analysis/
 
 `smart_parking.db` is created automatically the first time you run the project.
 
+## Deploy to Render
+
+The repository includes a `render.yaml` Blueprint for a free Streamlit web service
+in Render's Singapore region. To deploy it, open the Render Dashboard, choose
+**New > Blueprint**, connect this GitHub repository, and apply the Blueprint.
+Render installs `requirements.txt` and starts Streamlit on the port provided by
+Render. The service automatically deploys new commits to `main`.
+
+The parking records are simulated and stored in a local SQLite database. Render's
+free web services use an ephemeral filesystem, so generated history is reset when
+the service restarts, spins down, or deploys. Free services can also take about a
+minute to wake after 15 minutes without traffic. Use persistent storage only if
+you intentionally choose a paid Render plan.
+
 ---
 
 ## 2. Step-by-step guide (Windows + VS Code)
