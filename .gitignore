@@ -1,0 +1,23 @@
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local simulation database
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated reports (keep the placeholder)
+reports/*
+!reports/.gitkeep
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
