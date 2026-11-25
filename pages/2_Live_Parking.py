@@ -14,6 +14,10 @@ import parking_simulator
 import ui_helpers
 import visualization
 
+# Ensure the SQLite schema exists when this page is opened directly by URL,
+# including on hosts where the app process may have restarted its local DB.
+database.init_database()
+
 ui_helpers.page_header(
     "🚗", "Live Parking",
     "Simulated parking-sensor view. Green = available, red = occupied.",
